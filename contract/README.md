@@ -1,6 +1,9 @@
-# Hello NEAR Contract
+# Main contract 
 
-The smart contract exposes two methods to enable storing and retrieving a greeting in the NEAR network.
+Storage and collect open data from competitions
+
+#Privat contract
+Contract for short term storage in Calimero privat shard with cross contract call. 
 
 ```rust
 const DEFAULT_GREETING: &str = "Hello";
