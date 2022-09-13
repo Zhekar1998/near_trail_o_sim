@@ -1,0 +1,8 @@
+/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/integration-tests/target/debug/deps/near_chain_configs-48ef3e14d0cbf540.rmeta: /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/lib.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/client_config.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/genesis_config.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/genesis_validate.rs
+
+/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/integration-tests/target/debug/deps/near_chain_configs-48ef3e14d0cbf540.d: /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/lib.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/client_config.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/genesis_config.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/genesis_validate.rs
+
+/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/lib.rs:
+/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/client_config.rs:
+/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/genesis_config.rs:
+/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/near-chain-configs-0.14.0/src/genesis_validate.rs:
