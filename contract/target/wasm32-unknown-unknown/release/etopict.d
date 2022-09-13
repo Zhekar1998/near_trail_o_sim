@@ -1,1 +1,0 @@
-/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/contract/target/wasm32-unknown-unknown/release/etopict.wasm: /Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/contract/src/lib.rs

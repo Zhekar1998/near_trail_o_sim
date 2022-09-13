@@ -10,24 +10,15 @@ use std::convert::TryInto;
 
 
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::serde_json::json;
-use near_sdk::{log, near_bindgen, Timestamp, Gas, Balance, serde_json};
+use near_sdk::{log, near_bindgen, Timestamp};
 use near_sdk::collections::Vector;
 use near_sdk::collections::UnorderedMap;
 use near_sdk::AccountId;
-use near_sdk::env;
 use near_sdk::collections::LazyOption;
 use near_sdk::env::{panic_str, attached_deposit, signer_account_id, block_timestamp_ms};
 use serde::Serialize;
 use sha2::{Sha256, Digest};
 
-const DESTINATION_CONTRACT_ID: &str = "etopict.calimero.testnet"; //"dev-1662471437541-86282131349740";
-const DESTINATION_CONTRACT_METHOD: &str = "comp_finish";
-//const DESTINATION_CONTRACT_ARGS: String = "";
-const DESTINATION_GAS: Gas = Gas(20_000_000_000_000);
-const DESTINATION_DEPOSIT: Balance = 0;
-const NO_DEPOSIT: Balance = 0;
-const CROSS_CALL_GAS: Gas = Gas(20_000_000_000_000);
 
 // use near_sdk::serde::{Deserialize, Serialize};
 
@@ -253,7 +244,7 @@ impl Contract {
 
     pub fn comp_start(&self, key: u32){
         let mut comp = self.competitions.get(&key).unwrap();
-        if block_timestamp_ms()>comp.time_start {
+        if comp.time_start<block_timestamp_ms() {
             comp.active = true;    
         }else {panic_str("to early")};
         
@@ -263,21 +254,6 @@ impl Contract {
         let mut comp = self.competitions.get(&key).unwrap();
         if comp.time_end>block_timestamp_ms() {
             comp.active = false;    
-            env::promise_return(env::promise_create(
-                AccountId::new_unchecked("xsc_connector.hackathon7.apptest-development.testnet".to_string()
-                //AccountId::new_unchecked("dev-1662472041989-87785428528272".to_string()
-            ),
-                "cross_call",
-                &serde_json::to_vec(&(
-                    DESTINATION_CONTRACT_ID, 
-                    DESTINATION_CONTRACT_METHOD, 
-                    json!({"key":key}).to_string(), 
-                    DESTINATION_GAS, 
-                    DESTINATION_DEPOSIT, 
-                    )).unwrap(),
-                NO_DEPOSIT,
-                CROSS_CALL_GAS,
-            ));
         }else {panic_str("to early")};
     }
     pub fn get_competitions_short(&self)->Vec<CompShortOut>{

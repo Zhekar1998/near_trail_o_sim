@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/contract/target/wasm32-unknown-unknown/release/build/typenum-d12f7bdf960f2025/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/contract/target/wasm32-unknown-unknown/release/build/typenum-d12f7bdf960f2025/out/op.rs

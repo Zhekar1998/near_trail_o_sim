@@ -1,8 +1,0 @@
-/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/contract/target/debug/deps/libimpl_trait_for_tuples-38a6a7d246cdddc9.dylib: /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/lib.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/full_automatic.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/semi_automatic.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/utils.rs
-
-/Users/yevheniilukatskyi/Documents/trail-o_smart_contract/near_trail_o/contract/target/debug/deps/impl_trait_for_tuples-38a6a7d246cdddc9.d: /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/lib.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/full_automatic.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/semi_automatic.rs /Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/utils.rs
-
-/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/lib.rs:
-/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/full_automatic.rs:
-/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/semi_automatic.rs:
-/Users/yevheniilukatskyi/.cargo/registry/src/github.com-1ecc6299db9ec823/impl-trait-for-tuples-0.2.2/src/utils.rs:
