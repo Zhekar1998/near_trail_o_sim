@@ -1,7 +1,7 @@
-near-blank-project
+ETOPICT
 ==================
 
-This app was initialized with [create-near-app]
+Project in active development
 
 
 Quick Start
