@@ -33,7 +33,6 @@ Exploring The Code
    this is your entrypoint to learn how the frontend connects to the NEAR blockchain.
 
 
-
 Deploy
 ======
 
