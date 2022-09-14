@@ -10,7 +10,8 @@ use std::convert::TryInto;
 
 
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::{log, near_bindgen, Timestamp};
+use near_sdk::serde_json::json;
+use near_sdk::{log, near_bindgen, Timestamp, Promise, env};
 use near_sdk::collections::Vector;
 use near_sdk::collections::UnorderedMap;
 use near_sdk::AccountId;
@@ -19,6 +20,8 @@ use near_sdk::env::{panic_str, attached_deposit, signer_account_id, block_timest
 use serde::Serialize;
 use sha2::{Sha256, Digest};
 
+
+pub const NFTCONTRACT: &str = "mintspace2.testnet";
 
 // use near_sdk::serde::{Deserialize, Serialize};
 
@@ -219,6 +222,20 @@ impl Contract {
         }     
     }
 
+    pub fn mint_prize(&self, key: u32, image: String){
+        let place =self.competitions.get(&key).unwrap().meta.get().unwrap()
+        .results.unwrap().get(&signer_account_id()).unwrap().place.unwrap();
+            Promise::new(AccountId::new_unchecked(String::from(NFTCONTRACT).clone()))
+            .function_call(
+                "nft_mint".to_string(),
+                json!({"token_id" : self.competitions.get(&key).unwrap().name.clone()+&place.to_string(),
+                 "receiver_id": env::signer_account_id(), "token_metadata": {"title": "test_nft", "description": "for took part in competitions", "media": "https://drive.google.com/file/d/1wRbwm8zOOCDilg8IxApSu66NKLA1BUg5/view?usp=sharing" }}).to_string().into_bytes(), //TODO normal nft generation
+                 10_000_000_000_000_000_000_000,
+                near_sdk::Gas(5_000_000_000_000));
+        }
+
+     
+   
 
     pub fn startcomp_user(&self, key: u32){
         let comp = self.competitions.get(&key).unwrap();
@@ -244,7 +261,7 @@ impl Contract {
 
     pub fn comp_start(&self, key: u32){
         let mut comp = self.competitions.get(&key).unwrap();
-        if comp.time_start<block_timestamp_ms() {
+        if block_timestamp_ms()>comp.time_start {
             comp.active = true;    
         }else {panic_str("to early")};
         
@@ -304,7 +321,7 @@ impl Contract {
                     v.penalty+=1;
                 }
             }
-           }
+        }
         }else { panic_str("wrong answers") };
     }
 
@@ -322,6 +339,8 @@ impl Contract {
             }).collect()
     }
 }
+
+
 pub fn jsonToBorch(json: Vec<String>)->Vector<String>{
     let mut vector: Vector<String>=Vector::new(b"q");
     json.iter().for_each(|el|{
